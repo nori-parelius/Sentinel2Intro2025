@@ -1,8 +1,8 @@
 # Sentinel 2 data
 
-This repo contains the presentation and resources for a lecture about Sentinel 2 as part of TEK4710 at ITS, UiO.
+This repo contains the code for a lecture on using Sentinel 2 as part of TEK4710 at ITS, UiO.
 
-The presentation includes a demo of how to download Sentinel 2 data using the Copernicus Browser, visualise the data and calculate the NDVI index. 
+The .ipynb file includes a demo of how to download Sentinel 2 data using the Copernicus Browser, visualise the data and calculate the NDVI index. 
 
 If you are a participant in that course, as a pre-homework, I would like you to read this README.md before the class. 
 
@@ -17,10 +17,13 @@ In order to download data from Copernicus, you have to create a user account. To
 
 Please, try to get this conda environment ready before the class.
 
-### 1. First of all you need [Anaconda](https://www.anaconda.com/download) 
+### 1. First of all you need [Anaconda](https://www.anaconda.com/download/success) 
+
+Download the full Anaconda on the left (under Distribution Installers), or if you know what you are doing and are comfortable using a command line interface, go for Miniconda. 
 
 Anaconda is the easiest way to get coding with Python, so go ahead and install if you don't have it yet.
-Installing Anaconda should provide all you need, including the jupyter notebooks. 
+Installing Anaconda should provide all you need, including the jupyter notebooks.
+
 ### 2. Create a new environment with the right packages
 
 Most projects will require you to install a bunch of Python packages. It can get messy fast, because many 
@@ -36,6 +39,7 @@ These are the packages used in this project:
 * pyproj (working with projections)  
 
 Note: In Jupyter notebook you will need to pick the right environment. 
+
 You have two options for creating the env and istalling packages: 
 
 #### a) Install it yourself   
@@ -52,14 +56,5 @@ You install packages with ```conda install -c conda-forge <package_name>```, so 
 
 Download the `environment.yml` file from this repo, then go to Anaconda Powershell Prompt, navigate to the folder where you store the file and run:  
 `conda env create -f environment.yml`.  
-This will create the environment, give it the name that I called mine, i.e. `Sent2Intro24` and install the necessary packages. You can then activate the environment by typing ```conda activate Sent2Intro24```.
+This will create the environment, give it the name that I called mine, i.e. `Sent2Intro25` and install the necessary packages. You can then activate the environment by typing ```conda activate Sent2Intro25```.
 
-## Side-note about Copernicus Open Access Hub vs Copernicus Data Space Ecosystem
-
-The [Copernicus Open Access Hub](https://scihub.copernicus.eu/), which was previously distributing esa’s data, has closed at the end of October 2023. The new service is called [Copernicus Data Space Ecosystem](https://dataspace.copernicus.eu/) and it provides a simple [Browser](https://browser.dataspace.copernicus.eu/?zoom=5&lat=50.16282&lng=20.78613&themeId=DEFAULT-THEME&visualizationUrl=U2FsdGVkX189mCFCYnDD3UnASaMbX0sftnlKaN3uO6insQGa7BZae5N4qzS8XaMSkDRUDKafY42Hj90c5dZ%2F2RTG0v7Bn8WHkn9b6DBcb4hPVVHLGwPtC3fq3FPlMZac&datasetId=S2_L2A_CDAS&demSource3D=%22MAPZEN%22&cloudCoverage=30&dateMode=SINGLE) that you can use to download data. 
-
-In this class we will be using the Browser, but apart from the Browser, the new Copernicus Data Space provides a number of APIs to download data. 
-
-If you search around for APIs to download Sentinel data, you will surely run into many of them. Particularly the Python library called sentinelsat used to be very popular, and you will find it used in a lot of older code examples. However, it was based on the old Open Access Hub, which isn’t up anymore, so the sentinelsat package doesn’t work. There are probably other third-party libraries that also got broken because of this (just so you know if you try something and it doesn’t work). 
-
-Some of the APIs that work with the new Copernicus Data Space Ecosystem are listed here: [APIs | Copernicus Data Space Ecosystem](https://dataspace.copernicus.eu/analyse/apis).

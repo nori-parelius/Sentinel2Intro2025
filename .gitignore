@@ -1,7 +1,6 @@
 *.html
 *.zip
 *.SAFE/
-orig_full_Sentinel2.ipynb
 *.tif
 /data/
 /.ipynb_checkpoints/
